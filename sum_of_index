@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+import os
+var1 = [ 1, 2, 3, 5 ]
+var2 = 5
+
+def sum_vals(l, y):
+    return sum(v for v in l) + y
+
+z = []
+z.append(var1.pop(0))
+while( len(var1) > 0 ):
+    y = var1.pop(0)
+    if sum_vals(z, y) <= var2:
+        z.append(y)
+    else:
+        print(z)
+        os.sys.exit(2)
+
+print(z)
